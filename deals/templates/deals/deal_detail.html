@@ -1,0 +1,65 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block title %}{{ deal.title }} | MyShop{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+    <!-- Back Button -->
+    <a href="{% url 'deals:deal_list' %}" class="btn btn-outline-secondary mb-4">
+        ← Back to Deals
+    </a>
+
+    <div class="row g-4 align-items-center">
+
+        <!-- Deal Image -->
+        <div class="col-md-6 text-center">
+            {% if deal.products.first.image %}
+                <img src="{{ deal.products.first.image.url }}" 
+                     class="img-fluid rounded shadow-sm" 
+                     style="max-height: 350px; object-fit: cover;">
+            {% else %}
+                <img src="{% static 'images/placeholder.png' %}" 
+                     class="img-fluid rounded shadow-sm" 
+                     style="max-height: 350px; object-fit: cover;">
+            {% endif %}
+        </div>
+
+        <!-- Deal Info -->
+        <div class="col-md-6">
+            <h2 class="fw-bold">{{ deal.title }}</h2>
+
+            <!-- Pricing -->
+            <div class="my-3">
+                <p class="text-muted mb-1"><del>₹{{ deal.original_price }}</del></p>
+                <h3 class="text-success fw-bold">₹{{ deal.discounted_price }}</h3>
+
+                {% if deal.discount_percentage %}
+                    <span class="badge bg-danger mt-2">
+                        {{ deal.discount_percentage }} OFF
+                    </span>
+                {% endif %}
+            </div>
+
+            <p class="text-muted">{{ deal.description }}</p>
+
+            <!-- Product List -->
+            <h5 class="mt-4 mb-2">Products in this deal:</h5>
+            <ul class="list-group">
+                {% for product in deal.products.all %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>{{ product.name }}</span>
+                        <span class="text-success">₹{{ product.price }}</span>
+                    </li>
+                {% empty %}
+                    <li class="list-group-item text-muted">
+                        No products found in this deal.
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

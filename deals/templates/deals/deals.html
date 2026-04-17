@@ -1,0 +1,60 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block title %}Hot Deals | MyShop{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+    <h2 class="text-center mb-5 fw-bold">🔥 Hot Deals</h2>
+
+    <div class="row g-4">
+
+        {% for deal in deals %}
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card h-100 shadow-sm">
+
+                {% if deal.products.first.image %}
+                    <img src="{{ deal.products.first.image.url }}" 
+                         class="card-img-top" 
+                         style="height: 220px; object-fit: cover;"
+                         alt="{{ deal.title }}">
+                {% else %}
+                    <img src="{% static 'images/placeholder.png' %}" 
+                         class="card-img-top"
+                         style="height: 220px; object-fit: cover;"
+                         alt="{{ deal.title }}">
+                {% endif %}
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ deal.title }}</h5>
+
+                    <p class="mb-2">
+                        <span class="text-muted"><del>₹{{ deal.original_price }}</del></span>
+                        <span class="text-success fw-bold ms-2">₹{{ deal.discounted_price }}</span>
+                    </p>
+
+                    {% if deal.discount_percentage %}
+                        <span class="badge bg-danger mb-2">{{ deal.discount_percentage }} OFF</span>
+                    {% endif %}
+
+                    <p class="text-muted mb-3">{{ deal.description|truncatewords:15 }}</p>
+
+                    <a href="{% url 'deals:deal_detail' deal.id %}" 
+                       class="btn btn-primary w-100">
+                        View Deal
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center">
+            <p class="text-muted">No deals available at the moment.</p>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "landing/base.html" %}
+{% load static %}
+{% block title %}Search Results{% endblock %}
+{% block content %}
+
+<div class="container my-4">
+
+    <h4>Search Results for: <b>{{ query }}</b></h4>
+
+    <!-- FILTER SIDEBAR -->
+    <form method="get" class="row mt-3">
+
+        <input type="hidden" name="q" value="{{ query }}">
+
+        <div class="col-md-3">
+            <label class="fw-bold">Category</label>
+            <select name="category" class="form-select">
+                <option value="">All</option>
+                {% for cat in categories %}
+                    <option value="{{ cat.slug }}">{{ cat.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label class="fw-bold">Brand</label>
+            <select name="brand" class="form-select">
+                <option value="">All</option>
+                {% for b in brands %}
+                    <option value="{{ b }}">{{ b }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="col-md-2">
+            <label class="fw-bold">Min Price</label>
+            <input type="number" name="min_price" class="form-control" placeholder="₹0">
+        </div>
+
+        <div class="col-md-2">
+            <label class="fw-bold">Max Price</label>
+            <input type="number" name="max_price" class="form-control" placeholder="₹50000">
+        </div>
+
+        <div class="col-md-2 d-flex align-items-end">
+            <button class="btn btn-primary w-100">Apply</button>
+        </div>
+    </form>
+<!-- PRODUCT GRID -->
+<div class="row mt-4">
+    {% if results %}
+        {% for product in results %}
+        <div class="col-md-3 col-6 mb-4">
+            <a href="{% url 'products:product_detail' product.slug %}" class="text-decoration-none text-dark">
+                <div class="card shadow-sm border-0 h-100">
+
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" class="card-img-top p-2" style="height:200px;object-fit:contain;">
+                    {% else %}
+                        <img src="{% static 'images/no-image.png' %}" class="card-img-top p-2" style="height:200px;object-fit:contain;">
+                    {% endif %}
+
+                    <div class="card-body">
+                        <h6>{{ product.name|truncatechars:30 }}</h6>
+                        <p class="text-danger fw-bold">
+                            {% if product.discount_price %}
+                                ₹{{ product.discount_price }} <small class="text-muted"><del>₹{{ product.price }}</del></small>
+                            {% else %}
+                                ₹{{ product.price }}
+                            {% endif %}
+                        </p>
+                        {% if product.brand %}
+                        <p class="text-muted small">{{ product.brand }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p class="mt-4">No results found.</p>
+    {% endif %}
+</div>
+</div>
+
+{% endblock %}

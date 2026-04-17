@@ -1,0 +1,141 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+{% block title %}Products | MyShop{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+  <!-- Header -->
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">Our Products</h2>
+    <p class="text-muted">Browse all available items</p>
+  </div>
+
+  <!-- Search & Filter -->
+  <form method="get" class="row g-3 mb-4">
+    <div class="col-md-4">
+      <input type="search" name="search" value="{{ search_query }}" class="form-control"
+             placeholder="Search products...">
+    </div>
+
+    <div class="col-md-3">
+      <select name="category" class="form-select">
+        <option value="">All Categories</option>
+        {% for cat in categories %}
+          <option value="{{ cat.id }}" {% if selected_category == cat.id|stringformat:'s' %}selected{% endif %}>
+            {{ cat.name }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-primary w-100">Search</button>
+    </div>
+  </form>
+
+  <!-- Product Grid -->
+  <div class="row g-4">
+    {% for product in page_obj %}
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="card product-card h-100 shadow-sm position-relative">
+
+        {% if product.discount_price %}
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
+        {% endif %}
+
+        {% if product.image %}
+          <img src="{{ product.image.url }}" class="card-img-top product-img" alt="{{ product.name }}">
+        {% else %}
+          <img src="{% static 'images/no-image.png' %}" class="card-img-top product-img" alt="No Image">
+        {% endif %}
+
+        <div class="card-body text-center">
+          <h6 class="fw-semibold text-truncate">{{ product.name }}</h6>
+
+          {% if product.discount_price %}
+            <p class="mb-1">
+              <strong>₹{{ product.discount_price }}</strong>
+              <small class="text-muted"><del>₹{{ product.price }}</del></small>
+            </p>
+          {% else %}
+            <p><strong>₹{{ product.price }}</strong></p>
+          {% endif %}
+
+          <a href="{% url 'products:product_detail' product.slug %}" class="btn btn-outline-primary btn-sm w-100 mb-2">
+            View Details
+          </a>
+
+          <a href="{% url 'cart:add_to_cart' product.id %}" class="btn btn-primary btn-sm w-100">
+            Add to Cart
+          </a>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="text-center py-5 text-muted">
+      <h4>No products found.</h4>
+      <p>Try different search or category.</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Pagination -->
+  {% if page_obj.has_other_pages %}
+  <div class="d-flex justify-content-center mt-4">
+    <nav>
+      <ul class="pagination">
+        {% if page_obj.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Prev</a></li>
+        {% else %}
+          <li class="page-item disabled"><span class="page-link">Prev</span></li>
+        {% endif %}
+
+        {% for p in page_obj.paginator.page_range %}
+          {% if p == page_obj.number %}
+            <li class="page-item active"><span class="page-link">{{ p }}</span></li>
+          {% else %}
+            <li class="page-item"><a class="page-link" href="?page={{ p }}">{{ p }}</a></li>
+          {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+          <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+        {% else %}
+          <li class="page-item disabled"><span class="page-link">Next</span></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+  {% endif %}
+
+</div>
+
+<!-- 🔥 Styles -->
+<style>
+.product-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.product-img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+.btn {
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+</style>
+
+{% endblock %}

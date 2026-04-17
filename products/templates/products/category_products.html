@@ -1,0 +1,81 @@
+{% extends "landing/base.html" %}
+{% load static %}
+{% block title %}{{ category.name }} | MyShop{% endblock %}
+
+{% block content %}
+
+<div class="container py-4">
+
+  <!-- Category Title -->
+  <h2 class="fw-bold mb-4 text-center text-uppercase">{{ category.name }}</h2>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb justify-content-center">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ category.name }}</li>
+    </ol>
+  </nav>
+
+  <!-- Product Grid -->
+  {% if products %}
+  <div class="row g-4">
+    {% for product in products %}
+    <div class="col-md-3 col-6">
+      <div class="card border-0 shadow-sm h-100 product-card">
+
+        <!-- Image -->
+        {% if product.image %}
+          <img src="{{ product.image.url }}" class="card-img-top" style="height:230px; object-fit:cover;">
+        {% else %}
+          <img src="{% static 'landing/default/no-image.png' %}" class="card-img-top" style="height:230px; object-fit:cover;">
+        {% endif %}
+
+        <!-- Body -->
+        <div class="card-body text-center">
+          <h6 class="fw-semibold mb-2">{{ product.name|truncatewords:4 }}</h6>
+
+          {% if product.discount_price %}
+            <p class="mb-1 text-danger fw-bold fs-6">
+              ₹{{ product.discount_price }}
+              <span class="text-muted text-decoration-line-through small">₹{{ product.price }}</span>
+            </p>
+            <span class="badge bg-success mb-2">
+              {{ product.get_discount_percentage }}% OFF
+            </span>
+          {% else %}
+            <p class="mb-2 fw-bold fs-6">₹{{ product.price }}</p>
+          {% endif %}
+        </div>
+
+        <!-- Footer -->
+        <div class="p-3 pt-0">
+          <a href="/products/{{ product.slug }}/" class="btn btn-dark w-100 btn-sm">View Details</a>
+
+
+        </div>
+
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% else %}
+    <p class="text-center text-muted fs-5 mt-5">No products available in this category.</p>
+  {% endif %}
+
+</div>
+
+<!-- 🔥 Hover Animation -->
+<style>
+.product-card {
+  transition: 0.25s;
+  border-radius: 12px;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+</style>
+
+{% endblock %}

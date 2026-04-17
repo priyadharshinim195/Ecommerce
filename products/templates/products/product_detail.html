@@ -1,0 +1,177 @@
+{% extends "landing/base.html" %} {% load static %} {% block title %}{{
+product.name }} | MyShop{% endblock %} {% block content %}
+
+<div class="container py-5">
+  <div class="row g-5">
+    <!-- PRODUCT IMAGE SECTION -->
+    <div class="col-md-5">
+      <div class="image-box shadow rounded p-3 bg-white position-relative">
+        {% if product.image %}
+        <img
+          src="{{ product.image.url }}"
+          class="img-fluid rounded main-image"
+          alt="{{ product.name }}"
+        />
+        {% else %}
+        <img
+          src="{% static 'images/no-image.png' %}"
+          class="img-fluid rounded"
+          alt="No Image"
+        />
+        {% endif %} {% if product.discount_price %}
+        <span class="badge bg-danger discount-badge">SALE</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- PRODUCT DETAILS -->
+    <div class="col-md-7">
+      <h2 class="fw-bold mb-2">{{ product.name }}</h2>
+      <p class="text-muted">{{ product.category.name }}</p>
+
+      <!-- PRICE SECTION -->
+      <div class="price-box mb-3">
+        {% if product.discount_price %}
+        <h3 class="text-success fw-bold d-inline">
+          ₹{{ product.discount_price }}
+        </h3>
+        <h5 class="text-muted d-inline ms-2">
+          <del>₹{{ product.price }}</del>
+        </h5>
+
+        {% if discount %}
+        <span class="badge bg-warning text-dark ms-2">{{ discount }}% OFF</span>
+        {% endif %} {% else %}
+        <h3 class="fw-bold">₹{{ product.price }}</h3>
+        {% endif %}
+      </div>
+
+      <!-- DESCRIPTION -->
+      {% if product.description %}
+      <div class="mb-4">
+        <h5 class="fw-semibold mb-2">Product Description</h5>
+        <p class="text-secondary">{{ product.description }}</p>
+      </div>
+      {% endif %}
+
+      <!-- ACTION BUTTONS -->
+      <div class="buttons d-flex flex-wrap gap-3 mb-4">
+        <a
+          href="{% url 'cart:add_to_cart' product.id %}"
+          class="btn btn-dark px-4 py-2 fw-semibold shadow-sm action-btn"
+        >
+          🛒 Add to Cart
+        </a>
+
+        {% if user.is_authenticated %}
+
+        <form action="{% url 'orders:checkout' %}" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="product_id" value="{{ product.id }}" />
+          <button
+            type="submit"
+            class="btn btn-primary px-4 py-2 fw-semibold shadow-sm action-btn"
+          >
+            ⚡ Buy Now
+          </button>
+        </form>
+
+        {% else %}
+
+        <a
+          href="{% url 'accounts:login' %}?next={{ request.path }}"
+          class="btn btn-primary px-4 py-2 fw-semibold shadow-sm action-btn"
+        >
+          ⚡ Buy Now
+        </a>
+
+        {% endif %} {% if user.is_authenticated %}
+        <a
+          href="{% url 'wishlist:add_to_wishlist' product.id %}"
+          class="btn btn-outline-danger px-4 py-2 fw-semibold shadow-sm action-btn"
+        >
+          ❤️ Add to Wishlist
+        </a>
+        {% else %}
+        <a
+          href="{% url 'accounts:login' %}"
+          class="btn btn-outline-secondary px-4 py-2 fw-semibold shadow-sm action-btn"
+        >
+          🔒 Login to Wishlist
+        </a>
+        {% endif %}
+      </div>
+
+      <!-- RATING SECTION -->
+      <div class="rating-area mt-4 p-3 border rounded shadow-sm bg-white">
+        <h6 class="fw-bold mb-2">⭐ Customer Feedback</h6>
+
+        {% if user.is_authenticated %}
+        <form action="{% url 'rating:add_rating' product.id %}" method="POST">
+          {% csrf_token %}
+
+          <div class="d-flex align-items-center gap-3">
+            <select name="stars" class="form-select w-auto">
+              <option value="1">⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+
+            <button class="btn btn-primary btn-sm shadow-sm">Submit</button>
+          </div>
+
+          <textarea
+            name="review"
+            class="form-control mt-2"
+            placeholder="Write a review..."
+          ></textarea>
+        </form>
+        {% else %}
+        <p>
+          <a href="{% url 'accounts:login' %}">Login</a> to rate this product.
+        </p>
+
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS -->
+<style>
+  .main-image {
+    height: 420px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  .main-image:hover {
+    transform: scale(1.05);
+  }
+
+  .discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .action-btn {
+    transition: 0.3s ease;
+  }
+  .action-btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .price-box h3 {
+    font-size: 2rem;
+  }
+
+  .rating-area {
+    border-left: 4px solid #007bff;
+  }
+</style>
+
+{% endblock %}

@@ -1,0 +1,206 @@
+{% extends "landing/base.html" %} 
+{% load static %} 
+{% block title %}MyShop | Home{% endblock %} {% block content %}
+
+<!-- ⭐ CATEGORY ROW -->
+<section class="category-row mb-4">
+  {% for category in categories %}
+  <a
+    href="{% url 'products:category_products' category.slug %}"
+    class="cat-box"
+  >
+    <img src="{% static 'landing/icons/' %}{{ category.slug }}.png" />
+    <p>{{ category.name }}</p>
+  </a>
+  {% endfor %}
+</section>
+
+<!-- ⭐ MAIN CAROUSEL -->
+<div
+  id="mainCarousel"
+  class="carousel slide carousel-fade mb-4 rounded overflow-hidden shadow-sm"
+  data-bs-ride="carousel"
+  data-bs-interval="3000"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="{% static 'landing/banners/bannera.jpg' %}"
+        class="d-block w-100 banner-img"
+      />
+      <div
+        class="carousel-caption d-flex flex-column justify-content-center h-100"
+      >
+        <h2 class="fw-bold">New Year Mega Sale</h2>
+        <p>Upto 60% OFF on all electronics</p>
+        <a href="/deals/" class="btn btn-light px-4 fw-bold">Shop Now</a>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img
+        src="{% static 'landing/banners/bannerb.jpg' %}"
+        class="d-block w-100 banner-img"
+      />
+      <div
+        class="carousel-caption d-flex flex-column justify-content-center h-100"
+      >
+        <h2 class="fw-bold">Top Smartphones 2025</h2>
+        <p>Flagship mobiles with best offers</p>
+        <a href="/products/category/mobile/" class="btn btn-light px-4 fw-bold"
+          >Explore</a
+        >
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img
+        src="{% static 'landing/banners/bannerc.jpg' %}"
+        class="d-block w-100 banner-img"
+      />
+      <div
+        class="carousel-caption d-flex flex-column justify-content-center h-100"
+      >
+        <h2 class="fw-bold">Gadgets & Accessories</h2>
+        <p>Power banks, watches, neckbands & more</p>
+        <a href="/products/" class="btn btn-light px-4 fw-bold">Browse</a>
+      </div>
+    </div>
+  </div>
+
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#mainCarousel"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#mainCarousel"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- ⭐ HOT DEALS -->
+<div class="row justify-content-center g-4">
+  {% for product in top_deals %}
+  <div class="col-md-3 col-6">
+    <div class="card shadow-sm h-100 product-card">
+      <div class="badge bg-danger position-absolute m-2 px-2 py-1">Deal</div>
+
+      {% if product.get_discount_percentage %}
+      <div class="badge bg-success position-absolute top-0 end-0 m-2 px-2 py-1">
+        -{{ product.get_discount_percentage }}%
+      </div>
+      {% endif %}
+
+      <img src="{{ product.image.url }}" class="card-img-top deal-img" />
+      <div class="card-body text-center">
+        <h6 class="fw-bold">{{ product.name|truncatewords:3 }}</h6>
+
+        {% if product.discount_price %}
+        <p>⭐ {{ avg_rating }} / 5</p>
+        <p class="mb-1 text-decoration-line-through text-muted">
+          ₹{{ product.price }}
+        </p>
+        <p class="text-success fw-bold fs-5">₹{{ product.discount_price }}</p>
+        {% else %}
+        <p class="text-primary fw-bold fs-5">₹{{ product.price }}</p>
+        {% endif %}
+
+        <a
+          href="{% url 'products:product_detail' product.slug %}"
+          class="btn btn-dark btn-sm w-100 mt-2"
+          >View</a
+        >
+
+        {% if request.user.is_authenticated and product.id in wishlist_ids %}
+        <a
+          href="{% url 'wishlist:remove_from_wishlist' product.id %}"
+          class="btn btn-danger btn-sm w-100 mt-2"
+          >💔 Remove</a
+        >
+        {% else %}
+        <a
+          href="{% url 'wishlist:add_to_wishlist' product.id %}"
+          class="btn btn-outline-danger btn-sm w-100 mt-2"
+          >❤️ Add Wishlist</a
+        >
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<h4 class="mt-4">Customer Reviews</h4>
+<hr />
+
+{% if reviews %} {% for r in reviews %}
+<div class="p-3 mb-3 border rounded">
+  <strong>{{ r.user.username }}</strong> — ⭐ {{ r.stars }}/5 <br />
+  <small class="text-muted">{{ r.created_at|date:"d M Y h:i A" }}</small>
+  {% if r.review %}
+  <p class="mt-2">{{ r.review }}</p>
+  {% endif %}
+</div>
+{% endfor %} {% else %}
+<p class="text-muted">No reviews yet. Be the first to review!</p>
+{% endif %}
+
+<!-- ⭐ TRENDING -->
+<h2 class="text-center fw-bold mt-5 mb-3">🔥 Trending Products</h2>
+<div class="text-center mb-4">
+  <a href="/products/" class="btn btn-outline-dark btn-sm">View All Products</a>
+</div>
+
+<div id="trendingCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row justify-content-center">
+        {% for item in trending|slice:"0:5" %}
+        <div class="col-6 col-md-2 mb-4">
+          <div class="card shadow-sm h-100 product-card">
+            <img src="{{ item.image.url }}" class="card-img-top deal-img" />
+            <div class="card-body text-center">
+              <h6>{{ item.name|truncatewords:3 }}</h6>
+
+              {% if item.discount_price %} {% if item.get_discount_percentage %}
+              <span class="badge bg-success position-absolute m-2 px-2 py-1"
+                >-{{ item.get_discount_percentage }}%</span
+              >
+              {% endif %}
+              <p class="mb-1 text-decoration-line-through text-muted">
+                ₹{{ item.price }}
+              </p>
+              <p class="text-success fw-bold fs-6">
+                ₹{{ item.discount_price }}
+              </p>
+              {% else %}
+              <p class="text-primary fw-bold fs-6">₹{{ item.price }}</p>
+              {% endif %}
+
+              <a
+                href="{% url 'products:product_detail' item.slug %}"
+                class="btn btn-outline-dark btn-sm w-100"
+                >View</a
+              >
+              <a
+                href="{% url 'add_to_wishlist' item.slug %}"
+                class="btn btn-outline-danger btn-sm w-100 mt-2"
+                >❤️ Wishlist</a
+              >
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

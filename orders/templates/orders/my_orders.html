@@ -1,0 +1,62 @@
+{% extends 'landing/base.html' %}
+{% block title %}My Orders{% endblock %}
+{% block content %}
+
+<div class="container mt-5">
+
+  <h2 class="mb-5 text-center fw-bold text-gradient">📦 My Orders</h2>
+
+  {% for order in orders %}
+  <div class="card shadow-lg mb-4 border-0 rounded-4">
+    <div class="card-body">
+
+      <!-- Order Header -->
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <h5 class="mb-1">Order #{{ order.id }}</h5>
+          <small class="text-muted">Placed on {{ order.created_at|date:"M d, Y h:i A" }}</small>
+        </div>
+
+        <!-- Status Badge -->
+        {% if order.status == "pending" %}
+          <span class="badge bg-warning text-dark py-2 px-3 rounded-pill">Pending</span>
+        {% elif order.status == "shipped" %}
+          <span class="badge bg-info text-white py-2 px-3 rounded-pill">Shipped</span>
+        {% elif order.status == "delivered" %}
+          <span class="badge bg-success py-2 px-3 rounded-pill">Delivered</span>
+        {% elif order.status == "cancelled" %}
+          <span class="badge bg-danger py-2 px-3 rounded-pill">Cancelled</span>
+        {% else %}
+          <span class="badge bg-secondary py-2 px-3 rounded-pill">{{ order.status|title }}</span>
+        {% endif %}
+      </div>
+
+      <hr class="my-3">
+
+      <!-- Order Details -->
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-2">
+          <p class="mb-1"><strong>Total Amount:</strong> <span class="text-primary">₹{{ order.total_amount }}</span></p>
+        </div>
+        <div class="col-md-4 mb-2">
+          <p class="mb-1"><strong>Payment:</strong> {{ order.payment_method|upper }}</p>
+        </div>
+        <div class="col-md-4 mb-2 text-md-end">
+          <a href="{% url 'orders:order_detail' order.id %}" class="btn btn-outline-primary btn-sm">
+            View Items &rarr;
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {% empty %}
+  <div class="alert alert-info p-4 text-center rounded-3">
+    😕 You have no orders yet.
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'landing/base.html' %}
+{% block title %}Order Success{% endblock %}
+
+{% block content %}
+
+<style>
+  .success-icon {
+    font-size: 70px;
+    animation: pop 0.4s ease-out;
+  }
+
+  @keyframes pop {
+    0% { transform: scale(0.2); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .success-container {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    border-radius: 15px;
+    padding: 40px 20px;
+  }
+
+  .order-card {
+    background: #112031;
+    border-radius: 12px;
+    border-left: 5px solid #00e5ff;
+  }
+</style>
+
+<div class="container py-5">
+  <div class="success-container text-center text-light shadow">
+
+    <!-- Big Success Icon -->
+    <div class="success-icon text-success">✔️</div>
+
+    <h2 class="fw-bold mt-3">Order Placed Successfully!</h2>
+    <p class="lead mt-2">
+      Thank you for shopping with us, <strong>{{ request.user.username }}</strong> 🎉
+    </p>
+
+    <!-- Order Summary Card -->
+    <div class="order-card text-light mt-4 p-4 shadow">
+      <h5 class="mb-3">🧾 Order Summary</h5>
+
+      <p><strong>Order ID:</strong> {{ order.id }}</p>
+      <p><strong>Total Amount:</strong> ₹{{ order.total_amount }}</p>
+      <p><strong>Order Date:</strong> {{ order.created_at|date:"M d, Y h:i A" }}</p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-4">
+      <a href="/orders/my-orders/" class="btn btn-info px-4 me-2">
+        View My Orders
+      </a>
+
+      <a href="/products/" class="btn btn-outline-light px-4">
+        Continue Shopping
+      </a>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

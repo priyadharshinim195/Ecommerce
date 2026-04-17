@@ -1,0 +1,139 @@
+:root {
+  --cyan: #00fff7;
+  --violet: #6610f2;
+  --bg-dark: #0b0b0f;
+  --blur: blur(14px);
+}
+
+/* Animated Background */
+.products-section {
+  background: linear-gradient(135deg, #000, #111);
+  position: relative;
+  min-height: 100vh;
+}
+.products-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(from 90deg, var(--cyan), var(--violet), var(--cyan));
+  opacity: 0.15;
+  filter: blur(200px);
+  animation: spin 25s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(90deg, var(--cyan), var(--violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Search & Filter */
+.search-glass, .filter-glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  backdrop-filter: var(--blur);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.search-glass:focus, .filter-glass:focus {
+  box-shadow: 0 0 10px var(--cyan);
+  border-color: var(--cyan);
+  outline: none;
+}
+
+/* Buttons */
+.btn-glow {
+  background: linear-gradient(90deg, var(--cyan), var(--violet));
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 15px var(--cyan);
+  transform: translateY(-2px);
+}
+
+.btn-outline-glass {
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  backdrop-filter: var(--blur);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.btn-outline-glass:hover {
+  background: var(--cyan);
+  color: #000;
+}
+
+/* Product Card */
+.product-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: var(--blur);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.35s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 255, 247, 0.25);
+}
+
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(90deg, var(--cyan), var(--violet));
+  color: #000;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 50px;
+  padding: 5px 12px;
+}
+
+/* Product Image Hover */
+.product-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.product-img-wrap img {
+  transition: transform 0.4s ease;
+}
+.product-card:hover img {
+  transform: scale(1.07);
+}
+.hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.product-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* Pagination */
+.pagination .page-link {
+  border-radius: 50px;
+  color: var(--cyan);
+  background: transparent;
+  border: 1px solid var(--cyan);
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+.pagination .page-link:hover {
+  background: var(--cyan);
+  color: #000;
+}
+.pagination .active .page-link {
+  background: var(--cyan);
+  color: #000;
+  border: none;
+}
