@@ -8,8 +8,9 @@
   <h2>Your Cart</h2>
 
   {% if items %}
-  <table class="table">
-    <thead>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
       <tr>
         <th>Product</th>
         <th>Quantity</th>
@@ -36,6 +37,7 @@
       {% endfor %}
     </tbody>
   </table>
+  </div>
   {% else %}
     <p>Your cart is empty.</p>
   {% endif %}

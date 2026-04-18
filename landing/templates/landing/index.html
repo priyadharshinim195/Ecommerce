@@ -137,7 +137,7 @@
   </div>
   {% endfor %}
 </div>
-<h4 class="mt-4">Customer Reviews</h4>
+{% comment %} <h4 class="mt-4">Customer Reviews</h4>
 <hr />
 
 {% if reviews %} {% for r in reviews %}
@@ -150,7 +150,7 @@
 </div>
 {% endfor %} {% else %}
 <p class="text-muted">No reviews yet. Be the first to review!</p>
-{% endif %}
+{% endif %} {% endcomment %}
 
 <!-- ⭐ TRENDING -->
 <h2 class="text-center fw-bold mt-5 mb-3">🔥 Trending Products</h2>

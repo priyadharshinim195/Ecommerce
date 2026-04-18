@@ -109,6 +109,31 @@
   }
 }
 
+@media (max-width: 576px) {
+  .product-img,
+  .deal-img,
+  .banner-img {
+    height: 180px;
+  }
+
+  .cat-box {
+    flex: 0 1 120px;
+  }
+
+  .cat-box img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .carousel-caption {
+    padding: 14px;
+  }
+
+  .wishlist-icon {
+    font-size: 18px;
+  }
+}
+
 .wishlist-icon {
   position: absolute;
   top: 8px;

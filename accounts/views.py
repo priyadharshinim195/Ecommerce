@@ -7,11 +7,9 @@ def register_view(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.set_password(form.cleaned_data['password'])
-            user.save()
+            form.save()  # ✅ password hashing handled inside form now
             messages.success(request, 'Registration successful! You can now log in.')
-            return redirect('login')
+            return redirect('accounts:login')
     else:
         form = RegisterForm()
     return render(request, 'accounts/register.html', {'form': form})
@@ -26,7 +24,7 @@ def login_view(request):
             if user is not None:
                 login(request, user)
                 messages.success(request, f'Welcome {username}!')
-                return redirect('home')
+                return redirect('home')  # ✅ 'home' has no namespace, keep as is
             else:
                 messages.error(request, 'Invalid username or password!')
     else:
@@ -36,6 +34,7 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     messages.success(request, 'You have been logged out successfully!')
-    return redirect('home')
+    return redirect('home')  # ✅ 'home' has no namespace, keep as is
+
 def profile_view(request):
     return render(request, "accounts/profile.html")
