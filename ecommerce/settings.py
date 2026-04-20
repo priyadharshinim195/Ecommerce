@@ -89,18 +89,16 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 #     }
 # }
 
+import os
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'defaultdb',
-        'USER': 'avnadmin',
-        'PASSWORD': 'root',  # click eye icon on Aiven to see it
-        'HOST': 'mysql-52ec8a9-priyadharshinimuthu2197-39d7.g.aivencloud.com',
-        'PORT': '28472',
-        'OPTIONS': {
-            'ssl': {'ca': None},
-            'ssl_mode': 'REQUIRED',
-        }
+        'NAME': os.environ.get('DB_NAME', 'defaultdb'),
+        'USER': os.environ.get('DB_USER', 'avnadmin'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+        'HOST': os.environ.get('DB_HOST', ''),
+        'PORT': os.environ.get('DB_PORT', '28472'),
     }
 }
 
