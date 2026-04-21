@@ -1,16 +1,12 @@
 from django.db import migrations
-from django.db import models
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('deals', '0001_initial'),  # replace with your latest migration
+        ('deals', '0001_initial'),
+        ('products', '0003_remove_cartitem_cart_remove_cartitem_product_and_more'),
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='deal',
-            name='products',
-            field=models.ManyToManyField(to='products.Product'),
-        ),
+        # Empty - products field already added in 0001_initial
     ]
