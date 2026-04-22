@@ -1,0 +1,1483 @@
+[
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "🖥️ Computing & Office Gadgets",
+    "slug": "Computers"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "name": "📱 Mobile & Smart Devices",
+    "slug": "mobiles"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "name": "📷 Cameras & Photography Gadgets",
+    "slug": "Cameras"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "name": "🎧 Audio Gadgets",
+    "slug": "audio"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "name": "🧠 Smart Home Gadgets",
+    "slug": "smart-home"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 6,
+  "fields": {
+    "name": "🎮 Gaming Gadgets",
+    "slug": "gaming"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 7,
+  "fields": {
+    "name": "🚀 Wearable Tech",
+    "slug": "wearable-tech"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "name": "Dell Inspiron",
+    "slug": "dell-inspiron",
+    "brand": null,
+    "category": 1,
+    "image": "products/Dell_Inspiron.jpg",
+    "description": "The Dell Inspiron series is designed for everyday performance with premium build quality and reliable Intel power.\r\n\r\n\r\n\r\n💻 Powerful Intel Processor — Choose from Intel Core i3 / i5 / i7 for fast and responsive performance\r\n\r\n🧠 High-Speed Memory — 8GB / 16GB DDR4 RAM ensures lag-free multitasking\r\n\r\n🚀 Fast Storage — 512GB / 1TB SSD for quick boot and application load\r\n\r\n🖥️ Full HD Display (1920 × 1080) — Vibrant color and eye-comfort viewing",
+    "price": "89990.00",
+    "discount_price": "54990.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-11-23T14:45:36.396Z",
+    "updated_at": "2025-11-23T14:45:36.396Z",
+    "is_verified": false
+  }
+},
+{
+  "model": "products.product",
+  "pk": 21,
+  "fields": {
+    "name": "Dell Vostro",
+    "slug": "dell-vostro",
+    "brand": "Dell Vostro 14″ Business Laptop",
+    "category": 1,
+    "image": "products/Dell_Vostro.jpg",
+    "description": "Dell Vostro is a business-focused laptop line. \r\nDell Store\r\n+1\r\n\r\nThey are typically more affordable than premium Dell lines (like XPS) but still provide good performance, build quality, and features for SMB, students, and professionals.\r\n\r\nCommon configurations: 13th-gen / 12th-gen Intel Core, or AMD Ryzen; SSD storage; 14″ or 15.6″ screens.\r\n\r\nGood for: office work, study, light-to-medium workloads.",
+    "price": "36689.00",
+    "discount_price": "34599.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-11-25T16:34:28.886Z",
+    "updated_at": "2025-11-25T16:37:10.405Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 22,
+  "fields": {
+    "name": "Dell XPS",
+    "slug": "dell-xps",
+    "brand": "Dell XPS 13 Plus 9320 (i7, 4K OLED)",
+    "category": 1,
+    "image": "products/Dell_XPS.jpg",
+    "description": "Availability: Premium XPS models may not always be in stock; check “New / Renewed / Used” status.\r\n\r\nWarranty: Confirm whether it’s covered by Dell India warranty.\r\n\r\nDeals: Sometimes Amazon offers bank offers / no-cost EMI — check those during checkout.\r\n\r\nBrand Transition: Dell is phasing out the “XPS” name in favor of “Dell Premium” etc.",
+    "price": "221423.00",
+    "discount_price": "171290.00",
+    "stock": 10,
+    "is_active": true,
+    "created_at": "2025-11-25T16:40:39.423Z",
+    "updated_at": "2025-11-25T16:40:39.423Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 23,
+  "fields": {
+    "name": "Dell Latitude",
+    "slug": "dell-latitude",
+    "brand": "Dell 16\" Pro 16 Plus / Latitude-class Laptop",
+    "category": 1,
+    "image": "products/Dell_Latitude.jpg",
+    "description": "Availability: Premium XPS models may not always be in stock; check “New / Renewed / Used” status.\r\n\r\nWarranty: Confirm whether it’s covered by Dell India warranty.\r\n\r\nDeals: Sometimes Amazon offers bank offers / no-cost EMI — check those during checkout.\r\n\r\nBrand Transition: Dell is phasing out the “XPS” name in favor of “Dell Premium” etc.",
+    "price": "55990.00",
+    "discount_price": "50000.00",
+    "stock": 13,
+    "is_active": true,
+    "created_at": "2025-11-26T07:53:16.937Z",
+    "updated_at": "2025-11-26T07:53:38.142Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 24,
+  "fields": {
+    "name": "Dell Alienware",
+    "slug": "dell-alienware",
+    "brand": "Alienware 16 Area-51 Gaming Laptop",
+    "category": 1,
+    "image": "products/Dell_Alienware.jpg",
+    "description": "Processor: Intel-based (high-end CPU) — suitable for gaming, rendering, multitasking.\r\n\r\nGraphics: Dedicated NVIDIA GPU (for smooth gaming / 3D / graphics-intensive tasks).\r\n\r\nMemory & Storage: 16 GB RAM + 1 TB SSD (fast storage + ample space) Great for users who want a “do-everything” laptop (gaming + work + content creation)",
+    "price": "120399.00",
+    "discount_price": "80899.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-11-26T07:59:32.224Z",
+    "updated_at": "2025-11-26T07:59:32.224Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 25,
+  "fields": {
+    "name": "HP Pavilion",
+    "slug": "hp-pavilion",
+    "brand": "Brand: HP (Pavilion series)",
+    "category": 1,
+    "image": "products/HP_Pavilion.jpg",
+    "description": "Brand: HP (Pavilion series)\r\n\r\nType / Use Case: Everyday laptop — for office work, browsing, studies, light-to-medium workloads\r\n\r\nConfiguration (base): Intel 12th-Gen Core i5, suitable for smooth multitasking, modern apps and Windows 11.\r\n\r\nPavilion laptops aim to deliver a good balance of performance, portability, and price — suitable for everyday tasks (office work, web browsing, media, light content creation, study, etc.).",
+    "price": "62999.00",
+    "discount_price": "55999.00",
+    "stock": 31,
+    "is_active": true,
+    "created_at": "2025-11-26T08:03:38.515Z",
+    "updated_at": "2025-11-26T08:03:38.515Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 26,
+  "fields": {
+    "name": "HP Victus",
+    "slug": "hp-victus",
+    "brand": "HP Victus 15‑fa0002NG (15.6″, Intel Core i5)",
+    "category": 1,
+    "image": "products/HP_Victus.jpg",
+    "description": "HP Victus 15‑fa0002NG (15.6″, Intel Core i5) — a balanced mid-range Victus model, with 15.6″ FHD display and mid-level CPU. A good choice if you want everyday use + some gaming / editing without overspending.",
+    "price": "80000.00",
+    "discount_price": "60000.00",
+    "stock": 20,
+    "is_active": true,
+    "created_at": "2025-11-26T08:06:23.685Z",
+    "updated_at": "2025-11-26T08:06:23.685Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 27,
+  "fields": {
+    "name": "HP Omen",
+    "slug": "hp-omen",
+    "brand": "HP OMEN 16 Gaming Laptop",
+    "category": 1,
+    "image": "products/HP_Omen.jpg",
+    "description": "OMEN laptops typically offer dedicated NVIDIA GPUs (RTX series), powerful CPUs (Intel or AMD), good cooling, high-refresh-rate displays, and gaming-oriented features (RGB keyboards, optimization software, etc.). \r\nBusiness Standard\r\n+2",
+    "price": "154000.00",
+    "discount_price": "125000.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-11-26T08:16:49.960Z",
+    "updated_at": "2025-11-26T08:17:00.281Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 28,
+  "fields": {
+    "name": "HP Envy",
+    "slug": "hp-envy",
+    "brand": "HP (Hewlett-Packard).",
+    "category": 1,
+    "image": "products/HP_Envy.jpg",
+    "description": "A stylish, lightweight laptop built for professionals and creators. HP Envy delivers fast performance, vibrant display quality, and long battery life.",
+    "price": "90000.00",
+    "discount_price": "64990.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-11-26T08:21:59.136Z",
+    "updated_at": "2025-11-26T08:21:59.136Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 29,
+  "fields": {
+    "name": "HP Spectre",
+    "slug": "hp-spectre",
+    "brand": "HP",
+    "category": 1,
+    "image": "products/HP_Spectre.jpg",
+    "description": "Built for demanding workflows like video editing, graphic design or professional multitasking — with powerful CPU/GPU, OLED display, rich connectivity, premium finish and convertible flexibility. Perfect for users who want performance, elegance and versatility in one machine.",
+    "price": "179999.00",
+    "discount_price": "139999.00",
+    "stock": 18,
+    "is_active": true,
+    "created_at": "2025-11-26T08:24:20.252Z",
+    "updated_at": "2025-11-26T08:24:20.252Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 30,
+  "fields": {
+    "name": "HP EliteBook",
+    "slug": "hp-elitebook",
+    "brand": "HP EliteBook 640 14 G10 Notebook",
+    "category": 1,
+    "image": "products/HP_EliteBook.jpg",
+    "description": "A compact 14‑inch business laptop designed for modern work — combining reliable performance, SSD‑based storage, and professional‑grade security features. Ideal for office work, corporate use, or frequent travellers needing a durable, portable machine.",
+    "price": "127922.00",
+    "discount_price": "107539.00",
+    "stock": 29,
+    "is_active": true,
+    "created_at": "2025-11-26T08:26:56.009Z",
+    "updated_at": "2025-11-26T08:26:56.009Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 31,
+  "fields": {
+    "name": "lenova",
+    "slug": "lenova",
+    "brand": "Lenovo ThinkPad E14 Gen 6 Laptop",
+    "category": 1,
+    "image": "products/lenova.jpg",
+    "description": "Lenovo laptops offer a wide range — from budget‑friendly everyday machines to business‑class notebooks and high‑performance gaming rigs. With reliable build quality, modern processors, and SSD‑based storage, Lenovo devices suit students, professionals, and gamers alike.",
+    "price": "79999.00",
+    "discount_price": "59999.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-11-26T08:28:25.745Z",
+    "updated_at": "2025-11-26T08:28:25.745Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 32,
+  "fields": {
+    "name": "Lenovo ThinkPad",
+    "slug": "lenovo-thinkpad",
+    "brand": "Lenovo ThinkPad E14 (Intel)",
+    "category": 1,
+    "image": "products/Lenovo_ThinkPad.jpg",
+    "description": "Premium ThinkPads (high RAM, SSD, CPU) cost more but are more future‑proof and better for heavier workloads, multitasking, long‑term use.",
+    "price": "50000.00",
+    "discount_price": "41990.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-11-26T08:49:31.354Z",
+    "updated_at": "2025-11-26T08:49:31.354Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 33,
+  "fields": {
+    "name": "Lenovo Legion",
+    "slug": "lenovo-legion",
+    "brand": "Lenovo ThinkPad E14 Gen 6 Laptop",
+    "category": 1,
+    "image": "products/Lenovo_Legion.jpg",
+    "description": "A larger‑screen (16 inch) ThinkPad, which is helpful if you want more screen real estate for multitasking, coding, or productivity work. Larger ThinkPads tend to cost a bit more, but offer more workspace.",
+    "price": "70000.00",
+    "discount_price": "45000.00",
+    "stock": 25,
+    "is_active": true,
+    "created_at": "2025-11-26T08:57:08.564Z",
+    "updated_at": "2025-11-26T08:57:08.564Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 34,
+  "fields": {
+    "name": "Lenovo LOQ",
+    "slug": "lenovo-loq",
+    "brand": "Lenovo LOQ 15.6\" Laptop Intel Core i5-12450HX",
+    "category": 1,
+    "image": "products/Lenovo_LOQ.jpg",
+    "description": "The LOQ line is Lenovo’s budget-to‑mid‑range gaming/ performance‑oriented laptop series — aimed at gamers, students, content‑creators, and users needing good graphics + processing.",
+    "price": "70000.00",
+    "discount_price": "55000.00",
+    "stock": 25,
+    "is_active": true,
+    "created_at": "2025-11-26T08:58:34.890Z",
+    "updated_at": "2025-11-26T08:58:45.121Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 35,
+  "fields": {
+    "name": "Acer Aspire",
+    "slug": "acer-aspire",
+    "brand": "Acer Aspire 3 Intel Celeron Laptop",
+    "category": 1,
+    "image": "products/Acer_Aspire.jpg",
+    "description": "Everyday tasks: web browsing, office work, online classes, media consumption.\r\n\r\nStudents or general home use (with modest budget).\r\n\r\nMid‑level computing tasks (if you pick a mid‑spec variant).",
+    "price": "25000.00",
+    "discount_price": "22899.00",
+    "stock": 21,
+    "is_active": true,
+    "created_at": "2025-11-26T09:06:42.107Z",
+    "updated_at": "2025-11-26T09:06:42.107Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 36,
+  "fields": {
+    "name": "Acer Nitro",
+    "slug": "acer-nitro",
+    "brand": "Acer Nitro 5 Gaming Laptop",
+    "category": 1,
+    "image": "products/Acer_Nitro.jpg",
+    "description": "Acer Nitro laptops bring gaming‑grade power and performance to a laptop form — combining strong processors, dedicated NVIDIA graphics, high‑refresh displays, and efficient cooling. Whether you’re gaming, editing videos, designing graphics or running heavy workloads — Nitro delivers speed, smoothness, and reliability. With models ranging from budget-friendly to performance‑optimized, Nitro offers a solid balance of performance and value for gamers, creators, and power users.",
+    "price": "61990.00",
+    "discount_price": "51990.00",
+    "stock": 20,
+    "is_active": true,
+    "created_at": "2025-11-26T09:08:09.007Z",
+    "updated_at": "2025-11-26T09:08:09.007Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 37,
+  "fields": {
+    "name": "Acer Predator",
+    "slug": "acer-predator",
+    "brand": "Acer Predator Helios 300 Gaming Laptop",
+    "category": 1,
+    "image": "products/Acer_Predator.jpg",
+    "description": "Acer Predator laptops deliver gaming‑grade power and performance to a laptop form — combining fast processors, dedicated graphics, high‑refresh displays, and efficient cooling. Whether you are gaming, editing videos, designing graphics or running heavy workloads — Predator provides speed, smoothness, and reliability. With models spanning from mid‑range to high‑end, Predator offers a solid balance of performance and value for gamers, creators, and power users.",
+    "price": "180000.00",
+    "discount_price": "75000.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-11-26T09:09:47.181Z",
+    "updated_at": "2025-11-26T09:09:47.181Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 38,
+  "fields": {
+    "name": "Acer Swift",
+    "slug": "acer-swift",
+    "brand": "Acer Swift 3 Core i5 Laptop",
+    "category": 1,
+    "image": "products/Acer_Swift.jpg",
+    "description": "Acer Swift laptops deliver a clean blend of portability, performance, and stylish design. With slim bodies, lightweight build and efficient battery life, Swift is ideal for students, professionals, and frequent travellers — whether for office work, study, content consumption, or light creative tasks. From budget‑to‑midrange models to premium touch‑screen or AI‑ready versions, Acer Swift offers a laptop for every need without compromising on convenience or build quality.",
+    "price": "69700.00",
+    "discount_price": "45000.00",
+    "stock": 5,
+    "is_active": true,
+    "created_at": "2025-11-26T09:11:05.923Z",
+    "updated_at": "2025-11-26T09:11:05.923Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 39,
+  "fields": {
+    "name": "Acer Spin",
+    "slug": "acer-spin",
+    "brand": "Acer Spin 3 SP315-51 Laptop",
+    "category": 1,
+    "image": "products/Acer_Spin.jpg",
+    "description": "Acer Spin laptops combine the portability of a tablet with the functionality of a full laptop — featuring touchscreen displays, convertible hinges or 2-in-1 form‑factor, and sufficient performance for everyday computing, office tasks, studying, browsing, and light creative work. Their compact design, flexible usage modes, and balanced specs make them ideal for students, professionals and users on the go who want a versatile, easy-to-carry device without overspending.",
+    "price": "85000.00",
+    "discount_price": "30000.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-11-26T09:12:08.604Z",
+    "updated_at": "2025-11-26T09:12:16.034Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 40,
+  "fields": {
+    "name": "Samsung Galaxy Book Odyssey",
+    "slug": "samsung-galaxy-book-odyssey",
+    "brand": "Samsung",
+    "category": 1,
+    "image": "products/Samsung_Galaxy_Book_Odyssey.jpg",
+    "description": "Samsung Galaxy Book Odyssey brings powerful performance and portability to one machine — with Intel Core i7, NVIDIA RTX graphics, full‑HD display and fast SSD storage. Whether you’re gaming, editing videos, designing graphics or running heavy applications, Odyssey delivers the speed, graphics power and connectivity to handle demanding workloads without compromise.",
+    "price": "225000.00",
+    "discount_price": "185000.00",
+    "stock": 3,
+    "is_active": true,
+    "created_at": "2025-11-26T09:17:27.682Z",
+    "updated_at": "2025-11-26T09:17:27.682Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 41,
+  "fields": {
+    "name": "Samsung Galaxy Book Pro",
+    "slug": "samsung-galaxy-book-pro",
+    "brand": "Samsung",
+    "category": 1,
+    "image": "products/Samsung_Galaxy_Book_Pro.jpg",
+    "description": "Samsung Galaxy Book Pro offers premium‑class portability and performance in a sleek, lightweight package. With vivid AMOLED displays (or equivalent), modern Intel processors, fast SSD storage and enough RAM to handle productivity, creative work, and multitasking — it’s ideal for professionals, students, and travelers who want a powerful yet portable laptop. Galaxy Book Pro strikes a balance of design, performance, and convenience, making everyday work smoother and more efficient.",
+    "price": "176699.00",
+    "discount_price": "131990.00",
+    "stock": 4,
+    "is_active": true,
+    "created_at": "2025-11-26T09:18:31.368Z",
+    "updated_at": "2025-11-26T09:18:31.368Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 42,
+  "fields": {
+    "name": "Samsung Galaxy Book",
+    "slug": "samsung-galaxy-book",
+    "brand": "Samsung",
+    "category": 1,
+    "image": "products/Samsung_Galaxy_Book.jpg",
+    "description": "Samsung Galaxy Book delivers a sleek, portable and reliable laptop experience — combining modern Intel‑powered performance with a lightweight build. Ideal for students, professionals, and everyday users who want a laptop for work, study, browsing, streaming or general productivity without excess bulk. Galaxy Book strikes the right balance between convenience, performance, and value.",
+    "price": "75000.00",
+    "discount_price": "70000.00",
+    "stock": 2,
+    "is_active": true,
+    "created_at": "2025-11-26T09:19:43.876Z",
+    "updated_at": "2025-11-26T09:19:43.876Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 43,
+  "fields": {
+    "name": "iPhone 16",
+    "slug": "iphone-16",
+    "brand": "Apple",
+    "category": 2,
+    "image": "products/iPhone_16.jpg",
+    "description": "The iPhone 16 is the latest smartphone from Apple, which is also the most affordable smartphone with Apple Intelligence. Featuring a 6.1-inch OLED screen, the iPhone 16 is powered by the A18 chip and ships with iOS 18 OS with a starting price of Rs 79,900 for the 128 GB variant.",
+    "price": "79900.00",
+    "discount_price": "74900.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-11-29T12:48:57.165Z",
+    "updated_at": "2025-11-29T12:48:57.165Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 44,
+  "fields": {
+    "name": "iphone 15 pro",
+    "slug": "iphone-15-pro",
+    "brand": "Apple",
+    "category": 2,
+    "image": "products/Samsung_Galaxy_S24.jpg",
+    "description": "The iPhone 15 Pro comes with a 6.1-inch Super Retina XDR OLED display with 120 Hz ProMotion — smooth refresh and high brightness.\r\n\r\nStorage options: Available in 128 GB, 256 GB, 512 GB, and 1 TB variants.",
+    "price": "77455.00",
+    "discount_price": "71990.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-11-29T12:52:34.445Z",
+    "updated_at": "2025-11-29T12:52:34.445Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 45,
+  "fields": {
+    "name": "Samsung Galaxy S24",
+    "slug": "samsung-galaxy-s24",
+    "brand": "Samsung",
+    "category": 2,
+    "image": "products/Samsung_Galaxy_S23.jpg",
+    "description": "Galaxy S24 is a flagship-class Android phone but in a more compact / “regular flagship” form factor — offers a balance of performance, camera, displays, and long-term support. Good for daily heavy use, photography, media, gaming, and future-proofing.\r\n\r\nTypically 8 GB RAM, and variants include 128 GB, 256 GB, or 512 GB storage\r\n\r\n5G, Wi-Fi, NFC, Bluetooth and other modern connectivity options.",
+    "price": "59999.00",
+    "discount_price": "50999.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-11-29T13:01:23.750Z",
+    "updated_at": "2025-11-29T13:02:46.013Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 46,
+  "fields": {
+    "name": "OnePlus 12",
+    "slug": "oneplus-12",
+    "brand": "OnePlus",
+    "category": 2,
+    "image": "products/OnePlus_12.jpg",
+    "description": "OnePlus 12 is a premium flagship-grade Android phone — with a top-tier display, strong camera setup, very good performance, and fast charging + large battery. Good for heavy users, gaming, photography, multitasking, and long-term usage.",
+    "price": "64999.00",
+    "discount_price": "54999.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-01T13:16:06.539Z",
+    "updated_at": "2025-12-01T13:16:06.539Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 47,
+  "fields": {
+    "name": "Realme 12 Pro",
+    "slug": "realme-12-pro",
+    "brand": "Realme",
+    "category": 2,
+    "image": "products/Realme_12_Pro.jpg",
+    "description": "realme 12 Pro is a mid-range to upper-mid-range smartphone, offering a good balance of display, cameras (including telephoto), battery life, 5G, and fast charging. It’s a value-for-money device especially if you want more than just a basic phone but don’t want to go flagship-class.",
+    "price": "25999.00",
+    "discount_price": "19999.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-12-01T13:17:25.916Z",
+    "updated_at": "2025-12-01T13:17:25.916Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 48,
+  "fields": {
+    "name": "Vivo V30",
+    "slug": "vivo-v30",
+    "brand": "Vivo",
+    "category": 2,
+    "image": "products/Vivo_V30.jpg",
+    "description": "Vivo V30 gives a well-rounded mid-to-upper-mid-range smartphone experience: strong display, good cameras (front + back), decent performance, and a large battery with fast charging — a good balance for everyday use, social media, media consumption, photos, and moderate gaming.",
+    "price": "33990.00",
+    "discount_price": "30990.00",
+    "stock": 24,
+    "is_active": true,
+    "created_at": "2025-12-01T13:18:48.372Z",
+    "updated_at": "2025-12-01T13:18:48.372Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 49,
+  "fields": {
+    "name": "Vivo Y200",
+    "slug": "vivo-y200",
+    "brand": "Vivo",
+    "category": 2,
+    "image": "products/Vivo_Y200.jpg",
+    "description": "Vivo Y200 is a mid-range smartphone that offers a good display + camera + battery + 5G in a balanced package. It’s ideal for everyday users — social media, video watching, photos, moderate gaming, and general use — without the high cost of flagship phones.",
+    "price": "21999.00",
+    "discount_price": "18999.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-01T13:20:13.170Z",
+    "updated_at": "2025-12-01T13:20:26.435Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 50,
+  "fields": {
+    "name": "Oppo Reno 11",
+    "slug": "oppo-reno-11",
+    "brand": "Oppo",
+    "category": 2,
+    "image": "products/Oppo_Reno_11.jpg",
+    "description": "Reno 11 5G is a upper-midrange / mid-range smartphone that tries to balance good display, versatile camera system, decent performance, 5G and fast charging. It’s suitable for everyday use, media consumption, social media, photos & selfies, light to moderate apps/games.",
+    "price": "27999.00",
+    "discount_price": "24999.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-12-01T13:22:19.569Z",
+    "updated_at": "2025-12-01T13:22:19.569Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 51,
+  "fields": {
+    "name": "Oppo F25 Pro",
+    "slug": "oppo-f25-pro",
+    "brand": "Oppo",
+    "category": 2,
+    "image": "products/Oppo_F25_Pro.jpg",
+    "description": "Oppo F25 Pro 5G is a mid-range / upper-mid range smartphone that offers a balanced mix of good display, capable cameras, 5G connectivity, battery + fast charging, and smooth performance — making it a strong “value-for-money” choice if you want modern smartphone features without spending flagship-level money.",
+    "price": "25999.00",
+    "discount_price": "19999.00",
+    "stock": 21,
+    "is_active": true,
+    "created_at": "2025-12-01T13:24:04.646Z",
+    "updated_at": "2025-12-01T13:24:15.404Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 52,
+  "fields": {
+    "name": "Xiaomi Redmi Note 13",
+    "slug": "xiaomi-redmi-note-13",
+    "brand": "Xiaomi",
+    "category": 2,
+    "image": "products/Xiaomi_Redmi_Note_13.jpg",
+    "description": "Redmi Note 13 aims to be a balanced, budget-to-mid-range smartphone with a strong feature-set for its price: good display, decent cameras, capable hardware for everyday use, and a decent battery with fast charging.",
+    "price": "19999.00",
+    "discount_price": "16999.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-01T13:26:15.312Z",
+    "updated_at": "2025-12-01T13:26:27.769Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 53,
+  "fields": {
+    "name": "iPad Pro M4",
+    "slug": "ipad-pro-m4",
+    "brand": "iPad",
+    "category": 2,
+    "image": "products/iPad_Pro_M4.jpg",
+    "description": "iPad Pro M4 is a top-tier tablet aimed at people who want powerful performance + great display + pro-level multimedia, editing, creative or productivity usage — it’s more than just casual browsing or watching videos.",
+    "price": "99900.00",
+    "discount_price": "92000.00",
+    "stock": 21,
+    "is_active": true,
+    "created_at": "2025-12-01T13:32:07.273Z",
+    "updated_at": "2025-12-01T13:32:07.273Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 54,
+  "fields": {
+    "name": "iPad 10th Gen",
+    "slug": "ipad-10th-gen",
+    "brand": "iPad",
+    "category": 2,
+    "image": "products/iPad_10th_Gen.jpg",
+    "description": "iPad 10th Gen is a mid-range / “entry-to-mid” iPad — not as powerful as iPad Pro / iPad Air, but giving a solid mix of display, performance, battery, camera and Apple-ecosystem features. It’s “all-rounder plus value” — suitable for students, media & entertainment, browsing, note-taking, light creative work (drawing, editing), reading, video calls, etc.",
+    "price": "44900.00",
+    "discount_price": "40900.00",
+    "stock": 13,
+    "is_active": true,
+    "created_at": "2025-12-01T13:33:27.675Z",
+    "updated_at": "2025-12-01T13:33:27.675Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 55,
+  "fields": {
+    "name": "Canon EOS R6",
+    "slug": "canon-eos-r6",
+    "brand": "Canon",
+    "category": 3,
+    "image": "products/Canon_EOS_R6.jpg",
+    "description": "Canon EOS R6 is a full-frame, professional-grade, mirrorless hybrid camera suitable for serious photographers, content creators, videographers — bridging high-quality stills and video-work in one body.",
+    "price": "155999.00",
+    "discount_price": "151990.00",
+    "stock": 20,
+    "is_active": true,
+    "created_at": "2025-12-01T13:54:21.843Z",
+    "updated_at": "2025-12-01T13:54:21.843Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 56,
+  "fields": {
+    "name": "Sony Alpha A7 IV",
+    "slug": "sony-alpha-a7-iv",
+    "brand": "Sony",
+    "category": 3,
+    "image": "products/Sony_Alpha_A7_IV.jpg",
+    "description": "A7 IV is a high-end, versatile camera body — equally at home doing professional photography and video — making it a great choice for serious photographers, content creators, and professionals needing flexibility.",
+    "price": "223990.00",
+    "discount_price": "207999.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-01T13:55:36.891Z",
+    "updated_at": "2025-12-01T13:55:36.891Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 57,
+  "fields": {
+    "name": "Nikon Z6 II",
+    "slug": "nikon-z6-ii",
+    "brand": "Nikon",
+    "category": 3,
+    "image": "products/Nikon_Z6_II.jpg",
+    "description": "Nikon Z6 II is a full-frame, professional-grade mirrorless camera — powerful enough for high-quality photography (portraits, events, travel, landscape, wildlife) and videography. It balances performance, flexibility, and build quality — making it a popular “do-everything” camera body.",
+    "price": "200000.00",
+    "discount_price": "195000.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-12-01T13:56:55.195Z",
+    "updated_at": "2025-12-01T13:56:55.195Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 58,
+  "fields": {
+    "name": "Fujifilm X-T5",
+    "slug": "fujifilm-x-t5",
+    "brand": "Fujifilm",
+    "category": 3,
+    "image": "products/Fujifilm_X-T5.jpg",
+    "description": "X-T5 is a high-resolution, high-quality mirrorless camera that balances modern digital features (IBIS, high MP sensor, silent shutter, video) with the classic photography feel Fujifilm is known for. It’s strong for landscape, portrait, travel, commercial, street photography, and even hybrid photo/video work.",
+    "price": "158000.00",
+    "discount_price": "145999.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-01T13:59:52.585Z",
+    "updated_at": "2025-12-01T13:59:52.585Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 59,
+  "fields": {
+    "name": "GoPro Hero 12 Black",
+    "slug": "gopro-hero-12-black",
+    "brand": "GoPro Hero",
+    "category": 3,
+    "image": "products/GoPro_Hero_12_Black.jpg",
+    "description": "GoPro Hero 12 Black is a compact, rugged, versatile action camera, great for travel, adventure, sports, vlogging, and creative video/photo work — giving a mix of high‑res video, strong stabilization, flexible shooting modes and portability.",
+    "price": "65000.00",
+    "discount_price": "55000.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-01T14:02:24.034Z",
+    "updated_at": "2025-12-01T14:02:24.034Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 60,
+  "fields": {
+    "name": "DJI Osmo Pocket 3",
+    "slug": "dji-osmo-pocket-3",
+    "brand": "DJI",
+    "category": 3,
+    "image": "products/DJI_Osmo_Pocket_3.jpg",
+    "description": "The Osmo Pocket 3 is a compact, pocket‑sized handheld camera + gimbal made by DJI. It combines a fairly large image sensor, mechanical stabilization, and ease of use to deliver high‑quality video and footage — but in a small form factor",
+    "price": "52999.00",
+    "discount_price": "49889.00",
+    "stock": 13,
+    "is_active": true,
+    "created_at": "2025-12-01T14:07:16.003Z",
+    "updated_at": "2025-12-01T14:07:16.003Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 61,
+  "fields": {
+    "name": "Insta360 X3",
+    "slug": "insta360-x3",
+    "brand": "Insta360",
+    "category": 3,
+    "image": "products/Insta360_X3.jpg",
+    "description": "Insta360 is widely known for innovating 360‑degree camera and action‑camera technology — their cameras are designed to make immersive video/photo capture simpler and more accessible, even for amateurs or travel‑use.",
+    "price": "55999.00",
+    "discount_price": "49999.00",
+    "stock": 16,
+    "is_active": true,
+    "created_at": "2025-12-01T14:09:55.151Z",
+    "updated_at": "2025-12-01T14:10:06.147Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 62,
+  "fields": {
+    "name": "Manfrotto Tripod",
+    "slug": "manfrotto-tripod",
+    "brand": "Manfrotto",
+    "category": 3,
+    "image": "products/Manfrotto_Tripod.jpg",
+    "description": "A versatile 3‑section tripod with a 90° adjustable centre column, quick‑lock leg system, and adjustable leg angles. It supports a solid load and is a good “all‑rounder” tripod for photography or video.",
+    "price": "20000.00",
+    "discount_price": "18000.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-01T14:12:26.600Z",
+    "updated_at": "2025-12-01T14:12:26.600Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 63,
+  "fields": {
+    "name": "Sony WH-1000XM5 (Noise-Cancelling Headphones)",
+    "slug": "sony-wh-1000xm5-noise-cancelling-headphones",
+    "brand": "Sony WH",
+    "category": 4,
+    "image": "products/Sony_WH-1000XM5_Noise-Cancelling_Headphones.jpg",
+    "description": "The Sony WH-1000XM5 is a premium over‑ear wireless headphone designed for immersive listening with cutting‑edge noise cancellation and high‑quality audio. It’s built for comfort, long listening sessions, and modern use — whether you’re traveling, working, or relaxing with music.",
+    "price": "34990.00",
+    "discount_price": "29990.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-01T14:26:15.475Z",
+    "updated_at": "2025-12-01T14:31:23.007Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 64,
+  "fields": {
+    "name": "Bose QuietComfort 45",
+    "slug": "bose-quietcomfort-45",
+    "brand": "Bose",
+    "category": 4,
+    "image": "products/Bose_QuietComfort_45.jpg",
+    "description": "The Bose QuietComfort 45 is a premium over‑ear wireless headphone built for comfort, high‑fidelity audio and effective noise cancellation — ideal for travel, work, music, movies or calls. It balances quiet, comfort and sound, with features that suit long listening sessions and varied listening environments.",
+    "price": "32900.00",
+    "discount_price": "29900.00",
+    "stock": 13,
+    "is_active": true,
+    "created_at": "2025-12-01T14:28:21.003Z",
+    "updated_at": "2025-12-01T14:30:59.165Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 65,
+  "fields": {
+    "name": "Apple AirPods Pro 2",
+    "slug": "apple-airpods-pro-2",
+    "brand": "Apple",
+    "category": 4,
+    "image": "products/Apple_AirPods_Pro_2.jpg",
+    "description": "The Apple AirPods Pro (2nd Generation) are premium true‑wireless earbuds designed for top‑notch audio performance, convenience, comfort and modern connectivity. They deliver immersive sound, powerful noise control and seamless integration with Apple devices — ideal for music, calls, travel, workouts or everyday listening.",
+    "price": "24900.00",
+    "discount_price": "20900.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-12-01T14:30:21.084Z",
+    "updated_at": "2025-12-01T14:30:48.278Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 66,
+  "fields": {
+    "name": "JBL Tune 130NC TWS",
+    "slug": "jbl-tune-130nc-tws",
+    "brand": "JBL",
+    "category": 4,
+    "image": "products/JBL_Tune_130NC_TWS.jpg",
+    "description": "The JBL Tune 130NC TWS are true‑wireless in‑ear earbuds offering a mix of portable convenience, decent audio quality, and active noise‑cancellation — ideal for everyday music, calls, commuting, workouts or casual listening.",
+    "price": "4999.00",
+    "discount_price": "4298.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-12-01T14:33:23.935Z",
+    "updated_at": "2025-12-01T14:33:23.935Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 67,
+  "fields": {
+    "name": "JBL Flip 6 (Portable Bluetooth Speaker)",
+    "slug": "jbl-flip-6-portable-bluetooth-speaker",
+    "brand": "JBL",
+    "category": 4,
+    "image": "products/JBL_Flip_6_Portable_Bluetooth_Speaker.jpg",
+    "description": "The JBL Flip 6 is a compact yet powerful portable Bluetooth speaker designed for people who want high‑quality audio, portability and durability — ideal for home, travel, parties, outdoors or casual listening sessions. It delivers the signature “JBL Original Pro Sound” with strong bass, clear mids and crisp highs in a small, easy-to-carry package.",
+    "price": "14999.00",
+    "discount_price": "11999.00",
+    "stock": 23,
+    "is_active": true,
+    "created_at": "2025-12-01T14:35:14.258Z",
+    "updated_at": "2025-12-01T14:35:14.258Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 68,
+  "fields": {
+    "name": "Sony SRS-XB43",
+    "slug": "sony-srs-xb43",
+    "brand": "Sony",
+    "category": 4,
+    "image": "products/Rode_NT-USB.jpg",
+    "description": "The Sony SRS‑XB43 is a premium portable Bluetooth speaker offering powerful, deep bass, durable build, and long battery life — ideal for home, travel, outdoor, parties, or casual listening. It’s part of Sony’s EXTRA BASS™ speaker lineup, delivering punchy low‑end and balanced sound, plus portability and robustness for indoor or outdoor use.",
+    "price": "21990.00",
+    "discount_price": "19990.00",
+    "stock": 21,
+    "is_active": true,
+    "created_at": "2025-12-01T14:36:38.371Z",
+    "updated_at": "2025-12-01T14:36:38.371Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 69,
+  "fields": {
+    "name": "Blue Yeti USB Microphone",
+    "slug": "blue-yeti-usb-microphone",
+    "brand": "Blue",
+    "category": 4,
+    "image": "products/Blue_Yeti_USB_Microphone.jpg",
+    "description": "The Blue Yeti USB Microphone is a widely‑used, professional‑grade condenser mic designed for versatility — ideal for streaming, podcasting, gaming, voice‑overs, music, interviews or any recording needs on a PC/Mac.",
+    "price": "19990.00",
+    "discount_price": "16990.00",
+    "stock": 13,
+    "is_active": true,
+    "created_at": "2025-12-01T14:39:25.965Z",
+    "updated_at": "2025-12-01T14:39:25.965Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 70,
+  "fields": {
+    "name": "Rode NT-USB",
+    "slug": "rode-nt-usb",
+    "brand": "Rode",
+    "category": 4,
+    "image": "products/Rode_NT-USB_Cp12mp3.jpg",
+    "description": "The RØDE NT‑USB is a professional-quality USB condenser microphone that combines high-fidelity recording with plug‑and‑play convenience — ideal for podcasting, streaming, voice‑overs, gaming, online classes, music, and general voice recording.",
+    "price": "15990.00",
+    "discount_price": "14500.00",
+    "stock": 16,
+    "is_active": true,
+    "created_at": "2025-12-01T14:40:33.923Z",
+    "updated_at": "2025-12-01T14:40:33.923Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 71,
+  "fields": {
+    "name": "Amazon Echo Dot (Smart Speaker with Alexa)",
+    "slug": "amazon-echo-dot-smart-speaker-with-alexa",
+    "brand": "Amazon",
+    "category": 5,
+    "image": "products/Amazon_Echo_Dot_Smart_Speaker_with_Alexa.jpg",
+    "description": "The Amazon Echo Dot is a compact smart speaker that brings voice-controlled intelligence to any room. Powered by Alexa, it lets users play music, listen to news, check weather, set timers/alarms, control smart home devices, and more — all via voice commands or simple taps.",
+    "price": "5499.00",
+    "discount_price": "4999.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-12-02T08:31:31.128Z",
+    "updated_at": "2025-12-02T08:31:31.128Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 72,
+  "fields": {
+    "name": "Philips Hue Smart Bulbs",
+    "slug": "philips-hue-smart-bulbs",
+    "brand": "Philips",
+    "category": 5,
+    "image": "products/Philips_Hue_Smart_Bulbs.jpg",
+    "description": "The Philips Hue Smart Bulb is a premium LED smart light designed to transform ordinary lighting into a flexible, customizable smart-home lighting system. These bulbs let you control brightness, color, and ambience straight from a smartphone app (or via voice assistants), making them ideal for living rooms, bedrooms, kitchens, workspaces — or any room where you want mood-based lighting, convenience, and automation.",
+    "price": "3600.00",
+    "discount_price": "2500.00",
+    "stock": 17,
+    "is_active": true,
+    "created_at": "2025-12-02T08:32:47.384Z",
+    "updated_at": "2025-12-02T08:33:18.663Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 73,
+  "fields": {
+    "name": "TP-Link Kasa Smart Plug",
+    "slug": "tp-link-kasa-smart-plug",
+    "brand": "TP-Link",
+    "category": 5,
+    "image": "products/TP-Link_Kasa_Smart_Plug.jpg",
+    "description": "The TP-Link Kasa Smart Plug turns ordinary home appliances into smart-home devices, letting users control electrical items from anywhere via phone app or voice assistant. It’s ideal for lamps, fans, TVs, chargers, and other electronics — offering convenience, automation, and energy-management capabilities.",
+    "price": "4500.00",
+    "discount_price": "2500.00",
+    "stock": 16,
+    "is_active": true,
+    "created_at": "2025-12-02T08:34:33.733Z",
+    "updated_at": "2025-12-02T08:34:33.733Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 74,
+  "fields": {
+    "name": "Ring Video Doorbell 4",
+    "slug": "ring-video-doorbell-4",
+    "brand": "Ring",
+    "category": 5,
+    "image": "products/Ring_Video_Doorbell_4.jpg",
+    "description": "The Ring Video Doorbell 4 is a smart video-doorbell that lets you see, hear and speak to visitors at your door — from wherever you are. It combines on-demand 1080p HD video, motion detection, two-way audio and smart alerts to turn any entrance into a connected security point.",
+    "price": "18000.00",
+    "discount_price": "16000.00",
+    "stock": 14,
+    "is_active": true,
+    "created_at": "2025-12-02T08:35:43.925Z",
+    "updated_at": "2025-12-02T08:35:43.925Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 75,
+  "fields": {
+    "name": "Ecobee Smart Thermostat",
+    "slug": "ecobee-smart-thermostat",
+    "brand": "Ecobee",
+    "category": 5,
+    "image": "products/Ecobee_Smart_Thermostat.jpg",
+    "description": "The ecobee Smart Thermostat is an intelligent, Wi-Fi-enabled thermostat that gives modern homes precise control over heating and cooling — with automatic adjustments, energy savings, and smart-home integration. It’s ideal for homeowners who want comfort, convenience, and energy-efficient climate control without manual thermostat adjustments every day.",
+    "price": "41500.00",
+    "discount_price": "35500.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-02T08:36:57.961Z",
+    "updated_at": "2025-12-02T08:36:57.961Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 76,
+  "fields": {
+    "name": "Arlo Pro 4 Security Camera",
+    "slug": "arlo-pro-4-security-camera",
+    "brand": "Arlo",
+    "category": 5,
+    "image": "products/Arlo_Pro_4_Security_Camera.jpg",
+    "description": "The Arlo Pro 4 is a high-quality wireless security camera designed for home or business surveillance — offering sharp video, smart features, and flexible installation (indoor or outdoor). It’s part of Arlo’s “Pro” series, and can connect directly to Wi-Fi (no hub needed), making it easy to set up quickly.",
+    "price": "4500.00",
+    "discount_price": "3999.00",
+    "stock": 13,
+    "is_active": true,
+    "created_at": "2025-12-02T08:38:20.680Z",
+    "updated_at": "2025-12-02T08:38:20.680Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 77,
+  "fields": {
+    "name": "iRobot Roomba i3+ (Smart Vacuum)",
+    "slug": "irobot-roomba-i3-smart-vacuum",
+    "brand": "iRobot",
+    "category": 5,
+    "image": "products/iRobot_Roomba_i3_Smart_Vacuum.jpg",
+    "description": "The iRobot Roomba i3+ is a smart, robot-vacuum cleaner designed to make home cleaning automatic and convenient — ideal for apartments, houses, or any space where you want to reduce manual vacuuming. It brings intelligent navigation, automatic dirt disposal, voice-assistant compatibility, and a cleaning system suited for multiple floor types.",
+    "price": "69900.00",
+    "discount_price": "59900.00",
+    "stock": 18,
+    "is_active": true,
+    "created_at": "2025-12-02T08:39:55.111Z",
+    "updated_at": "2025-12-02T08:40:05.141Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 78,
+  "fields": {
+    "name": "Nanoleaf Shapes (Smart LED Panels)",
+    "slug": "nanoleaf-shapes-smart-led-panels",
+    "brand": "Nanoleaf",
+    "category": 5,
+    "image": "products/Nanoleaf_Shapes_Smart_LED_Panels.jpg",
+    "description": "The iRobot Roomba i3+ is a smart, robot-vacuum cleaner designed to make home cleaning automatic and convenient — ideal for apartments, houses, or any space where you want to reduce manual vacuuming. It brings intelligent navigation, automatic dirt disposal, voice-assistant compatibility, and a cleaning system suited for multiple floor types.",
+    "price": "60900.00",
+    "discount_price": "50900.00",
+    "stock": 19,
+    "is_active": true,
+    "created_at": "2025-12-02T08:41:16.759Z",
+    "updated_at": "2025-12-02T08:41:16.759Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 79,
+  "fields": {
+    "name": "Sony PlayStation 5",
+    "slug": "sony-playstation-5",
+    "brand": "Sony",
+    "category": 6,
+    "image": "products/Sony_PlayStation_5.jpg",
+    "description": "A powerful home-gaming console from Sony. Comes with 1 TB SSD and supports 4K games. Good for immersive console gaming.",
+    "price": "49990.00",
+    "discount_price": "40000.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-12-02T08:51:20.095Z",
+    "updated_at": "2025-12-02T08:51:20.095Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 80,
+  "fields": {
+    "name": "Xbox Series X",
+    "slug": "xbox-series-x",
+    "brand": "Xbox",
+    "category": 6,
+    "image": "products/Xbox_Series_X.jpg",
+    "description": "The Xbox Series X is a flagship next-generation gaming console by Microsoft, designed for gamers who want top-tier performance, ultra-fast load times, and 4K/8K-ready graphics. It’s built to deliver immersive gaming experiences — whether you’re into the latest AAA titles, competitive multiplayer, or large game libraries including backward-compatible classics.",
+    "price": "55990.00",
+    "discount_price": "49990.00",
+    "stock": 20,
+    "is_active": true,
+    "created_at": "2025-12-02T08:54:36.980Z",
+    "updated_at": "2025-12-02T08:54:36.980Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 81,
+  "fields": {
+    "name": "Nintendo Switch OLED",
+    "slug": "nintendo-switch-oled",
+    "brand": "Nintendo",
+    "category": 6,
+    "image": "products/Nintendo_Switch_OLED.jpg",
+    "description": "The Nintendo Switch OLED Model is the premium version of Nintendo’s hybrid gaming console — offering vivid visuals, flexible play modes and enhanced audio & storage. It’s ideal for gamers who want both portable and home-console gaming in one device, whether you’re playing on the go, on TV, or with friends/family.",
+    "price": "29990.00",
+    "discount_price": "22990.00",
+    "stock": 15,
+    "is_active": true,
+    "created_at": "2025-12-02T08:55:45.274Z",
+    "updated_at": "2025-12-02T08:55:45.274Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 82,
+  "fields": {
+    "name": "Asus ROG Ally (Handheld gaming)",
+    "slug": "asus-rog-ally-handheld-gaming",
+    "brand": "Asus",
+    "category": 6,
+    "image": "products/Asus_ROG_Ally_Handheld_gaming.jpg",
+    "description": "The ASUS ROG Ally is a powerful portable Windows-11 gaming PC that packs the performance of a gaming laptop + the portability of a handheld console. It’s built for serious gaming on the go — capable of running AAA PC titles, indie games and cloud-streamed games, all from a compact form factor.",
+    "price": "69990.00",
+    "discount_price": "59990.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-02T08:56:48.009Z",
+    "updated_at": "2025-12-02T08:56:48.009Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 83,
+  "fields": {
+    "name": "Steam Deck",
+    "slug": "steam-deck",
+    "brand": "Steam",
+    "category": 6,
+    "image": "products/Steam_Deck.jpg",
+    "description": "The Steam Deck is a powerful and portable handheld gaming PC made by Valve Corporation. It lets gamers carry a full-fledged PC in handheld form — capable of running modern AAA games, indie titles, and almost any PC game available on the Steam store or other PC game platforms.",
+    "price": "45000.00",
+    "discount_price": "40000.00",
+    "stock": 13,
+    "is_active": true,
+    "created_at": "2025-12-02T08:58:26.639Z",
+    "updated_at": "2025-12-02T08:58:26.639Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 84,
+  "fields": {
+    "name": "Razer Viper Ultimate (Gaming mouse)",
+    "slug": "razer-viper-ultimate-gaming-mouse",
+    "brand": "Razer",
+    "category": 6,
+    "image": "products/Razer_Viper_Ultimate_Gaming_mouse.jpg",
+    "description": "The Razer Viper Ultimate is a high-performance wireless gaming mouse engineered for esports-grade precision, speed, and comfort. With cutting-edge sensor technology, ultra-lightweight build, and customizable features, it’s well suited for competitive gamers, FPS titles, and anyone who demands responsive, lag-free control.",
+    "price": "20000.00",
+    "discount_price": "15000.00",
+    "stock": 18,
+    "is_active": true,
+    "created_at": "2025-12-02T09:00:02.658Z",
+    "updated_at": "2025-12-02T09:00:02.658Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 85,
+  "fields": {
+    "name": "Logitech G Pro X (Gaming headset)",
+    "slug": "logitech-g-pro-x-gaming-headset",
+    "brand": "Logitech",
+    "category": 6,
+    "image": "products/Logitech_G_Pro_X_Gaming_headset.jpg",
+    "description": "The Logitech G Pro X is a wired over-ear gaming headset built for serious gamers — offering clear, precise audio, competitive-grade positional sound, and reliable mic performance. It’s designed in collaboration with e-sports pros, combining comfort, durability, and high-fidelity audio for long gaming sessions, streaming, or competitive play.",
+    "price": "13995.00",
+    "discount_price": "11500.00",
+    "stock": 16,
+    "is_active": true,
+    "created_at": "2025-12-02T09:00:55.016Z",
+    "updated_at": "2025-12-02T09:00:55.016Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 86,
+  "fields": {
+    "name": "BenQ Zowie XL2546K (Gaming monitor)",
+    "slug": "benq-zowie-xl2546k-gaming-monitor",
+    "brand": "BenQ",
+    "category": 6,
+    "image": "products/BenQ_Zowie_XL2546K_Gaming_monitor.jpg",
+    "description": "The BenQ Zowie XL2546K is a competitive‑grade 24.5‑inch gaming monitor built for esports and fast‑paced games, designed to deliver ultra‑smooth, low‑lag performance. With a high refresh rate, lightning‑fast response time, and features tailored for shooters and multiplayer games — it aims to give players a competitive edge.",
+    "price": "35990.00",
+    "discount_price": "33998.00",
+    "stock": 19,
+    "is_active": true,
+    "created_at": "2025-12-02T09:02:12.734Z",
+    "updated_at": "2025-12-02T09:02:12.734Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 87,
+  "fields": {
+    "name": "Samsung Galaxy Watch Ultra Smartwatch 2025",
+    "slug": "samsung-galaxy-watch-ultra-smartwatch-2025",
+    "brand": "Samsung",
+    "category": 7,
+    "image": "products/Samsung.jpg",
+    "description": "A high‑end smartwatch with long battery life, robust fitness and health tracking, and strong build quality. Great for daily use and sports.",
+    "price": "31993.00",
+    "discount_price": "28993.00",
+    "stock": 17,
+    "is_active": true,
+    "created_at": "2025-12-02T09:04:57.100Z",
+    "updated_at": "2025-12-02T09:04:57.100Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 88,
+  "fields": {
+    "name": "Samsung Galaxy Fit3 Smart Band",
+    "slug": "samsung-galaxy-fit3-smart-band",
+    "brand": "Samsung",
+    "category": 7,
+    "image": "products/Samsung_Galaxy_Fit3_Smart_Band_2.jpg",
+    "description": "Lightweight, budget‑friendly band ideal for tracking steps, heart rate and basic fitness metrics. Good starter wearable.",
+    "price": "4999.00",
+    "discount_price": "3999.00",
+    "stock": 16,
+    "is_active": true,
+    "created_at": "2025-12-02T09:08:35.670Z",
+    "updated_at": "2025-12-02T09:08:35.670Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 89,
+  "fields": {
+    "name": "Ultrahuman AIR Smart Ring",
+    "slug": "ultrahuman-air-smart-ring",
+    "brand": "Ultrahuman",
+    "category": 7,
+    "image": "products/Ultrahuman_AIR_Smart_Ring.jpg",
+    "description": "A discreet Smart‑Ring that tracks sleep, body metrics and overall health — ideal if you prefer minimal accessories.",
+    "price": "19990.00",
+    "discount_price": "18999.00",
+    "stock": 13,
+    "is_active": true,
+    "created_at": "2025-12-02T09:11:48.045Z",
+    "updated_at": "2025-12-02T09:11:48.045Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 90,
+  "fields": {
+    "name": "WHOOP 4.0 Health & Fitness Tracker",
+    "slug": "whoop-40-health-fitness-tracker",
+    "brand": "WHOOP",
+    "category": 7,
+    "image": "products/WHOOP_4.0_Health__Fitness_Tracker.jpg",
+    "description": "A fitness‑oriented tracker focused on health, recovery and performance monitoring — useful for athletes or fitness enthusiasts.",
+    "price": "17990.00",
+    "discount_price": "15990.00",
+    "stock": 17,
+    "is_active": true,
+    "created_at": "2025-12-02T09:13:34.063Z",
+    "updated_at": "2025-12-02T09:13:34.063Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 91,
+  "fields": {
+    "name": "WatchOut WearPods Smartwatch",
+    "slug": "watchout-wearpods-smartwatch",
+    "brand": "Smartwatch",
+    "category": 7,
+    "image": "products/smartwatch.jpg",
+    "description": "A 2‑in‑1 smartwatch + earbuds wearable — neat if you want convenience and compactness in one device.",
+    "price": "3999.00",
+    "discount_price": "2999.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-02T09:17:26.369Z",
+    "updated_at": "2025-12-02T09:17:26.369Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 92,
+  "fields": {
+    "name": "boAt Enigma Ascend Smartwatch",
+    "slug": "boat-enigma-ascend-smartwatch",
+    "brand": "boAt",
+    "category": 7,
+    "image": "products/boAt_Enigma_Ascend_Smartwatch.jpg",
+    "description": "Affordable smartwatch with typical fitness tracking + step, SpO₂, and sleep monitoring — good value for money.",
+    "price": "2699.00",
+    "discount_price": "1699.00",
+    "stock": 21,
+    "is_active": true,
+    "created_at": "2025-12-02T09:20:35.833Z",
+    "updated_at": "2025-12-02T09:20:35.833Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 93,
+  "fields": {
+    "name": "Fire-Lens Dune Smart Glasses",
+    "slug": "fire-lens-dune-smart-glasses",
+    "brand": "Fire-Lens",
+    "category": 7,
+    "image": "products/Fire-Lens_Dune_Smart_Glasses.jpg",
+    "description": "mart glasses — representing “wearable beyond wrist or finger” — useful for AR or smart‑glass experiences.",
+    "price": "1998.00",
+    "discount_price": "1598.00",
+    "stock": 17,
+    "is_active": true,
+    "created_at": "2025-12-02T09:22:28.248Z",
+    "updated_at": "2025-12-02T09:22:28.248Z",
+    "is_verified": true
+  }
+},
+{
+  "model": "products.product",
+  "pk": 94,
+  "fields": {
+    "name": "pTron Orbis Neo Smart Glasses",
+    "slug": "ptron-orbis-neo-smart-glasses",
+    "brand": "pTron",
+    "category": 7,
+    "image": "products/pTron_Orbis_Neo_Smart_Glasses.jpg",
+    "description": "Another entry‑level wearable in glasses form — for those interested in smart eyewear.",
+    "price": "3799.00",
+    "discount_price": "2799.00",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2025-12-02T09:24:20.153Z",
+    "updated_at": "2025-12-02T09:24:20.153Z",
+    "is_verified": true
+  }
+}
+]
