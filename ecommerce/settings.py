@@ -86,12 +86,12 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME', 'ecommerce'),
-        'USER': os.environ.get('DB_USER', 'root'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'root'),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': os.environ.get('DB_PORT', '3306'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'blog_db_khno',
+        'USER': 'blog_db_khno_user',
+        'PASSWORD': '3BMZlzRykpaUDGXLSvnVwt01ZTVoc4AQ',
+        'HOST': 'dpg-d7k6cusp3tds73bc1ku0-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
 
