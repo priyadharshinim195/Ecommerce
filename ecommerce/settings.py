@@ -84,16 +84,25 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog_db_khno',
-        'USER': 'blog_db_khno_user',
-        'PASSWORD': '3BMZlzRykpaUDGXLSvnVwt01ZTVoc4AQ',
-        'HOST': 'dpg-d7k6cusp3tds73bc1ku0-a.oregon-postgres.render.com',
-        'PORT': '5432',
+import os
+import dj_database_url
+
+DATABASE_URL = os.environ.get('DATABASE_URL')
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.parse(DATABASE_URL)
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'blog_db_khno',
+            'USER': 'blog_db_khno_user',
+            'PASSWORD': '3BMZlzRykpaUDGXLSvnVwt01ZTVoc4AQ',
+            'HOST': 'dpg-d7k6cusp3tds73bc1ku0-a.oregon-postgres.render.com',
+            'PORT': '5432',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
