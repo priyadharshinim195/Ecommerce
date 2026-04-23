@@ -19,8 +19,8 @@ for product in Product.objects.all():
         image_path = f"D:/App/ecommerce/media/{product.image}"
         if os.path.exists(image_path):
             result = cloudinary.uploader.upload(image_path)
-            product.image = result['public_id']
+            product.image = result['secure_url']
             product.save()
-            print(f"Uploaded: {product.name}")
+            print(f"Uploaded & Updated: {product.name} → {result['secure_url']}")
 
 print("Done!")
