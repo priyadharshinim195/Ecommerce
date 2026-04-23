@@ -47,8 +47,19 @@ INSTALLED_APPS = [
     'orders',
     'wishlist',
     'rating',
+    'cloudinary',
+    'cloudinary_storage',
     
 ]
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dgklj999k',
+    'API_KEY': '959265639282665',
+    'API_SECRET': 'EUZhTd9WtX3KYFH8lRxZYtJ1ReM'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
