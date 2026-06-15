@@ -5,6 +5,7 @@ django.setup()
 
 import cloudinary
 import cloudinary.uploader
+import time
 
 cloudinary.config(
     cloud_name='dgklj999k',
@@ -14,13 +15,26 @@ cloudinary.config(
 
 from products.models import Product
 
+count = 0
 for product in Product.objects.all():
     if product.image:
-        image_path = f"D:/App/ecommerce/media/{product.image}"
+        image_name = str(product.image)
+        # Already uploaded to cloudinary — skip
+        if 'res.cloudinary.com' in image_name or not image_name.startswith('products/'):
+            print(f"⏭️ Skipping: {product.name}")
+            continue
+        image_path = f"D:/App/ecommerce/media/{image_name}.jpg"
         if os.path.exists(image_path):
-            result = cloudinary.uploader.upload(image_path)
-            product.image = result['secure_url']
-            product.save()
-            print(f"Uploaded & Updated: {product.name} → {result['secure_url']}")
+            try:
+                result = cloudinary.uploader.upload(image_path)
+                product.image = result['public_id']
+                product.save()
+                count += 1
+                print(f"✅ Uploaded: {product.name}")
+                time.sleep(1)  # avoid timeout
+            except Exception as e:
+                print(f"❌ Error: {product.name} → {e}")
+        else:
+            print(f"❌ Not found: {image_path}")
 
-print("Done!")
+print(f"Total uploaded: {count}")
