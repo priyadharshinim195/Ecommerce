@@ -1,3 +1,23 @@
+from pathlib import Path
+import os
+import cloudinary
+import dj_database_url
+
+# ... மற்ற code ...
+
+cloudinary.config(
+    cloud_name=os.environ.get('CLOUDINARY_CLOUD_NAME', 'dgklj999k'),
+    api_key=os.environ.get('CLOUDINARY_API_KEY', '959265639282665'),
+    api_secret=os.environ.get('CLOUDINARY_API_SECRET', 'EUZhTd9WtX3KYFH8lRxZYtJ1ReM')
+)
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME', 'dgklj999k'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY', '959265639282665'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET', 'EUZhTd9WtX3KYFH8lRxZYtJ1ReM'),
+}
+
+
 """
 Django settings for ecommerce project.
 
@@ -52,15 +72,8 @@ INSTALLED_APPS = [
     
 ]
 
-import cloudinary
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME', 'dgklj999k'),
-    'API_KEY': os.environ.get('CLOUDINARY_API_KEY', '959265639282665'),
-    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET', 'EUZhTd9WtX3KYFH8lRxZYtJ1ReM'),
-}
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -96,37 +109,37 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-import os
-import dj_database_url
+# import os
+# import dj_database_url
 
-DATABASE_URL = os.environ.get('DATABASE_URL')
-if DATABASE_URL:
-    DATABASES = {
-        'default': dj_database_url.parse(DATABASE_URL)
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'blog_db_khno',
-            'USER': 'blog_db_khno_user',
-            'PASSWORD': '3BMZlzRykpaUDGXLSvnVwt01ZTVoc4AQ',
-            'HOST': 'dpg-d7k6cusp3tds73bc1ku0-a.oregon-postgres.render.com',
-            'PORT': '5432',
-        }
-    }
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'ecommerce',
-#         'USER': 'root',
-#         'PASSWORD': 'root',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
+# DATABASE_URL = os.environ.get('DATABASE_URL')
+# if DATABASE_URL:
+#     DATABASES = {
+#         'default': dj_database_url.parse(DATABASE_URL)
 #     }
-# }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': 'blog_db_khno',
+#             'USER': 'blog_db_khno_user',
+#             'PASSWORD': '3BMZlzRykpaUDGXLSvnVwt01ZTVoc4AQ',
+#             'HOST': 'dpg-d7k6cusp3tds73bc1ku0-a.oregon-postgres.render.com',
+#             'PORT': '5432',
+#         }
+#     }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ecommerce',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
@@ -161,15 +174,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [BASE_DIR / 'static']
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # Default primary key field type
